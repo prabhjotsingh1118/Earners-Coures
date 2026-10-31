@@ -243,13 +243,18 @@ function Home() {
   const displayedRecipes = showFavoritesOnly ? favorites : recipes;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white font-sans">
+    <div className="min-h-screen bg-slate-950 text-white font-sans relative overflow-hidden animate-fadeIn">
       
+      {/* Background Decorative Glowing Orbs with Smooth Floating Feel */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-pink-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
       {/* Dark Glassmorphism Navigation Bar */}
-      <nav className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80 px-6 py-4 transition-all">
+      <nav className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80 px-6 py-4 transition-all shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => { setShowFavoritesOnly(false); fetchRecipes(0); }}>
-            <span className="text-2xl">🍳</span>
+          <div className="flex items-center gap-2 cursor-pointer group" onClick={() => { setShowFavoritesOnly(false); fetchRecipes(0); }}>
+            <span className="text-2xl group-hover:scale-110 transition-transform duration-200">🍳</span>
             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               RecipeFinder
             </span>
@@ -258,13 +263,13 @@ function Home() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-150 active:translate-y-0.5 active:scale-95 ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 active:translate-y-0.5 active:scale-95 ${
                 showFavoritesOnly
-                  ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg shadow-rose-500/20'
+                  ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg shadow-rose-500/30'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700'
               }`}
             >
-              <span>❤️</span>
+              <span className="hover:scale-125 transition-transform">❤️</span>
               <span>Favorites</span>
               <span className="bg-slate-950 text-pink-400 text-xs px-2 py-0.5 rounded-full font-bold">
                 {favorites.length}
@@ -275,10 +280,10 @@ function Home() {
       </nav>
 
       {/* Main Content Area */}
-      <div className="px-4 py-10">
+      <div className="px-4 py-10 relative z-10">
 
         {/* Dynamic Heading Banner */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 transition-all duration-300">
           <p className="text-purple-400 font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3">
             {showFavoritesOnly ? "Your Personal Collection" : "Discover Delicious Food"}
           </p>
@@ -297,7 +302,7 @@ function Home() {
           </p>
         </div>
 
-        {/* Search & Categories (Hidden when Favorites tab is active) */}
+        {/* Search & Categories */}
         {!showFavoritesOnly && (
           <>
             <form
@@ -308,7 +313,7 @@ function Home() {
                 type="text"
                 name="query"
                 placeholder="Search recipes (e.g. Pizza, Pasta)..."
-                className="w-full min-w-0 bg-slate-900 border border-slate-800 rounded-xl px-5 py-3 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base"
+                className="w-full min-w-0 bg-slate-900 border border-slate-800 rounded-xl px-5 py-3 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base shadow-inner"
               />
 
               <button
@@ -326,10 +331,10 @@ function Home() {
                 <button
                   key={cat}
                   onClick={() => handleCategorySelect(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-150 active:translate-y-1 active:scale-95 ${
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 active:translate-y-1 active:scale-95 ${
                     activeCategory === cat && !searchQuery
-                      ? 'bg-purple-600 text-white shadow-md shadow-purple-500/30'
-                      : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
+                      ? 'bg-purple-600 text-white shadow-md shadow-purple-500/30 scale-105'
+                      : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800 hover:scale-102'
                   }`}
                 >
                   {cat}
@@ -344,13 +349,13 @@ function Home() {
           {loading ? (
             <div className="flex flex-col items-center py-20">
               <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-              <p className="text-slate-400 mt-5 text-sm">Loading Recipes...</p>
+              <p className="text-slate-400 mt-5 text-sm animate-pulse">Loading Recipes...</p>
             </div>
           ) : (
             <>
               {displayedRecipes.length === 0 ? (
-                <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800 max-w-xl mx-auto">
-                  <div className="text-6xl mb-4">🍽️</div>
+                <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800 max-w-xl mx-auto backdrop-blur-sm transition-all">
+                  <div className="text-6xl mb-4 animate-bounce">🍽️</div>
                   <h2 className="text-2xl font-bold mb-2">
                     {showFavoritesOnly ? "No Favorites Saved Yet" : "No Recipes Found"}
                   </h2>
@@ -365,11 +370,11 @@ function Home() {
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
                   {displayedRecipes.map((recipe) => (
-                    <div key={recipe.id} className="relative group">
+                    <div key={recipe.id} className="relative group transition-all duration-300 hover:-translate-y-1.5">
                       {/* Heart Toggle Button Overlaid on Card */}
                       <button
                         onClick={() => toggleFavorite(recipe)}
-                        className="absolute top-3 right-3 z-10 bg-slate-900/80 backdrop-blur-md border border-slate-700/80 p-2.5 rounded-full text-lg shadow-md transition-all duration-150 active:scale-75 hover:bg-slate-800"
+                        className="absolute top-3 right-3 z-10 bg-slate-900/80 backdrop-blur-md border border-slate-700/80 p-2.5 rounded-full text-lg shadow-md transition-all duration-200 active:scale-75 hover:bg-slate-800 hover:scale-110"
                         title={favorites.some((fav) => fav.id === recipe.id) ? "Remove from Favorites" : "Add to Favorites"}
                       >
                         {favorites.some((fav) => fav.id === recipe.id) ? '❤️' : '🤍'}
@@ -381,13 +386,13 @@ function Home() {
                 </div>
               )}
 
-              {/* Load More Pagination (Only in All Recipes Mode) */}
+              {/* Load More Pagination */}
               {!showFavoritesOnly && !loading && recipes.length < total && (
                 <div className="flex justify-center mt-12">
                   <button
                     onClick={() => fetchRecipes(recipes.length, searchQuery, activeCategory)}
                     disabled={loadingMore}
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 active:translate-y-1 active:scale-95 disabled:opacity-50 text-white font-semibold px-8 py-3 rounded-xl shadow-lg shadow-purple-500/25 transition-all duration-150"
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 active:translate-y-1 active:scale-95 disabled:opacity-50 text-white font-semibold px-8 py-3 rounded-xl shadow-lg shadow-purple-500/25 transition-all duration-150 hover:shadow-purple-500/40"
                   >
                     {loadingMore ? "Loading..." : "Load More Recipes ↓"}
                   </button>
@@ -402,15 +407,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
