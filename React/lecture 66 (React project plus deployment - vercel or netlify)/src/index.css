@@ -11,3 +11,33 @@
   --font-serif: Georgia, serif;
   --font-sans: Arial, sans-serif;
 }
+
+
+
+
+
+
+
+
+/* All buttons press animation */
+
+button,
+.btn-press {
+  transition: transform 150ms ease, 
+              box-shadow 150ms ease,
+              background-color 150ms ease;
+}
+
+/* Button click effect */
+
+button:active,
+.btn-press:active {
+  transform: translateY(4px) scale(0.97);
+  box-shadow: none;
+}
+
+/* Button disabled */
+
+button:disabled {
+  cursor: not-allowed;
+}
