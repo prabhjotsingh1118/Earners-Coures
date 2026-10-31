@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08080d">
+    <title>MovieVerse | Discover Movies</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="nature-bg" aria-hidden="true">
+        <div class="moon-glow"></div>
+        <div class="forest-glow"></div>
+        <div class="fireflies"></div>
+    </div>
+
+    <header class="navbar"> 
+        <button id="menuToggle" class="menu-toggle"
+                aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <a href="index.html" class="brand">MOVIE<span>VERSE</span></a>
+
+        <button id="favoritesToggle" class="nav-fav">
+            ♥ <span>Favorites</span>
+            <span id="favoriteCount" class="count">0</span>
+        </button>
+    </header>
+
+    <!-- yeh isme js ka use kiya hai , js mein yeh hidden ho jata hai click karne par and three lines par click karne par explore aa jata hai and hat jata hai -->
+    <nav id="sideMenu" class="side-menu" aria-hidden="true"> 
+        <p class="menu-label">EXPLORE</p>
+        <a href="#" id="homeLink">⌂ &nbsp; Home</a>
+        <a href="#searchSection" id="searchLink">⌕ &nbsp; Search Movies</a>
+        <a href="#" id="menuFavorites">♥ &nbsp; My Favorites</a>
+        <a href="#aboutSection">✦ &nbsp; About MovieVerse</a>
+        <p class="menu-note">Your next favorite movie awaits.</p>
+    </nav>
+
+    <div id="menuBackdrop" class="menu-backdrop"></div>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR CINEMATIC UNIVERSE</p>
+                <h1>ENTER THE<br><span>MOVIEVERSE.</span></h1>
+                <p class="hero-description">
+                    Discover incredible stories, explore new worlds,
+                    and save the movies you love.
+                </p>
+
+                <a href="#searchSection" class="primary-btn">EXPLORE MOVIES ↗</a>
+            </div>
+            <div class="hero-orb" aria-hidden="true">
+                <div class="orb-ring"></div>
+                <div class="orb-core">MV</div>
+            </div>
+        </section>
+
+        <section id="searchSection" class="search-section">
+            <p class="eyebrow">FIND YOUR NEXT WATCH</p>
+            <h2>Discover <span>Movies.</span></h2>
+
+            <form id="searchForm" class="search-form">
+                <span class="search-icon">⌕</span>
+                <input id="movieInput" type="search"
+                    placeholder="Search movie titles..."
+                    aria-label="Search movie titles">
+                <button type="submit">SEARCH</button>
+            </form>
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow" id="resultsLabel">YOUR NEXT OBSESSION</p>
+                    <h2 id="resultsTitle">Explore Movies</h2>
+                </div>
+                <button id="showAll" class="text-btn">SHOW ALL</button>
+            </div>
+
+            <p id="statusMessage" class="status-message"
+               role="status" aria-live="polite"></p>
+
+            <div id="movieHub" class="movie-grid"></div>
+        </section>
+
+        <section id="aboutSection" class="about-section">
+            <p class="eyebrow">MADE FOR MOVIE LOVERS</p>
+            <h2>Every story deserves <span>your attention.</span></h2>
+            <p>Discover films, explore their stories and keep your
+               personal collection of favorites in one place.</p>
+        </section>
+
+        <footer>
+            <a href="index.html" class="brand">MOVIE<span>VERSE</span></a>
+            <p>Discover. Watch. Repeat.</p>
+        </footer>
+    </main>
+
+
+    <!-- mouse following -->
+<div class="cursor-glow"></div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

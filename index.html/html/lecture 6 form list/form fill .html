@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> Forms </h1>
+
+    <div>
+
+        <!-- action ke ander woo likhna hota hai ki form par click karne se kya actoin hoga  -->
+        <!-- action se hota hai ki form submit hone ke baad kaha jaye ga -->
+
+        <form action="form fill 2 .html" target="_blank">
+
+            <!-- fieldset yeh tag border lane ke kaam aata hai -->
+            <fieldset>
+                
+                <legend> Enter your basic information </legend>
+
+                <!-- input type="text" yeh jese type text likha hai thoo hum from par ek box ke ander kuch likh sakte hai -->
+
+                <label for="24"> Enter your full name :</label>
+                <input type="text" id="24" placeholder="Enter your name" required>
+
+                <!-- required tag se woo chije imp ho jati hai ki woo chij barni hi hai -->
+
+                <br><br>
+                <label for="21">Enter your Email id</label>
+                <input type="email" id="21" placeholder="Enter your email">
+
+                <br><br>
+                <label for="personal email"> Enter your email password </label>
+                <input type="password" id="personal email" placeholder="Enter your password" required>
+
+                <br><br>
+                <label for="44"> Full Name </label>
+                <input type="text" id="44" placeholder="Enter your name" required>
+
+                <!-- <label for="44"> Full name </label>
+            <input type="text" id="44" placeholder="Enter your name"> 
+            label for ki value aur id ki value same honi chahiye thoo ho yeh work karega -->
+
+                <br><br>
+                <label for="44"> are you 18+ ? </label>
+                <input type="checkbox" id="44" required>
+
+                <br><br>
+                <label for="34"> Enter your phone number </label>
+                <input type="number" id="34" l required min="0">
+
+                <!-- min="0" yeh set karne se number negetive matlab minus mein nahi jaye ge -->
+                <!-- min max lenght word ko account karne ke kaam aata hai -->
+
+                <br><br>
+                <label for="gender"> Gender : </label>
+                <br>
+
+                <!-- name do tags ka same hona chaheye thoo hi kaam karege yeh ek baar mein ek hi click kar sakte hai jese doo option hai ek male aur ek female dono mein se ek hi choice kar sakte hai -->
+
+                <label for="male"> Male </label>
+                <input type="Radio" id="male" name="gender" required>
+
+                <label for="female"> Female </label>
+                <input type="Radio" id="female" name="gender" required>
+
+                <br><br>
+                <label for="date"> Enter your DOB </label>
+                <input type="date" id="date" required>
+
+                <br><br>
+                <label for="file"> Upload your photo </label>
+                <input type="file" id="file" required>
+
+                <br><br>
+                <label for="city"> select your city </label>
+                <select name="" id="city" required>
+                    <option value="punjab">Punjab</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="uttar khand">Uttar khand</option>
+                    <option value="rajesthan" selected>Rajesthan</option>
+                    <option value="goa">Goa</option>
+                </select>
+
+                <br><br>
+
+                <input type="submit">
+                <button type="submit"> submit form </button>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

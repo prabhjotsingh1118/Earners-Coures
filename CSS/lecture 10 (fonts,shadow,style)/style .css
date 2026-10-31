@@ -1,0 +1,141 @@
+/* yeh file connect hai index .html se */
+/* sujections lane ke liye control + space */
+
+
+/* agar aur fonts chahiye thoo google par jaake google fonts search kar skate hai aur more fonts chun sakte hai */
+/* yehh property font change karne mein kaam aati hai */
+/* yeh intne fonts (,) mein likhe hai yeh kai sare fonts hai */
+/* yeh intne sare fonts likhe hai kiyu ki agar ex- franklin wala font na tho arial wale par jaye ga agar woo bhi pc mein na ho tho sans wale par jaye gaa thoo yeh hai */
+/* aur last wala font sabhi pc's mein hota hi hai */
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+}
+
+/* yeh chij id se kaam aati hai jab multiple chije ho */
+#Anime {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#world {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* yeh details video lecture 10 time 24 min par hai */
+/* #world {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-variation-set
+} */
+
+
+/* yeh font ke size adjust karne ke kaam aata hai */
+#Hello {
+    font-size: xx-large;
+}
+
+/* yeh manually adjuct karrne ke kaam aati hai */
+#name {
+    font-size: 40px;
+}
+
+/* yeh weight font ko heavy dikhane ke kaam aata hai */
+#animal {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+/* yeh style liye hai */
+/* yeh italic html mein bhi hai <em> tag ke saath es tag mein italic pehle se hi set hai ki woo chij italic hogi */
+#this {
+    font-style: italic;
+}
+
+
+/* yeh desiging ke liye hai */
+#mark {
+    font-variant: small-caps;
+}
+
+
+/* yeh height badane ke kaam aata hai do tags ke bich */
+#show {
+    line-height: 4;
+}
+
+
+/* yeh letter ke bich spacing dene ke kaam aati hai */
+#letter {
+    letter-spacing: 8px;
+}
+
+
+/* yeh word ke bich space dene ke kam aata hai */
+#rain {
+    word-spacing: 30px;
+}
+
+
+/* isne ne puri screen ki space  li hai tho hum chahe jither marji le ke ja sakte hai  */
+#know {
+    text-align: center;
+}
+
+/* yeh apply nahi hui kiyuki span ne jitni space chahiye utni hi li hai */
+span {
+    text-align: center;
+}
+
+
+/* yeh property underline ke saath hi apply hogi yeh underline ko design dene ke kaam aati hai */
+#games {
+    text-decoration: underline dashed 8px;
+}
+
+/* kuch property underline ke saath hi kaam karegi aur kuch bina underline */
+#his {
+    text-decoration: underline wavy;
+}
+
+
+/* es property se text ko transform kar skate hai */
+#him {
+    text-transform: capitalize;
+}
+
+#key {
+    text-transform: uppercase;
+}
+
+
+/* yeh property space ke liye hota hai age space dene ke liye*/
+/* starting mein space dene liye */
+#only {
+    text-indent: 200px;
+}
+
+
+/* yeh text mein shadow dene ke kaam aati hai*/
+/* 10px = y , 10px = x , 10px = blur */
+/* yeh px minus mein bhi le sakte hai */
+/* esme color bhi de sakte hai */
+#true {
+    text-shadow: 10px 10px 10px red;
+}
+
+
+/* yeh code hote hai color ke */
+/* 000000=black , ffffff=white , ff0000=red , 00ff00=green , 0000ff=blue yeh codde hai color ke*/
+/* yeh tho vase hi hai tho khud hi select kar sakte hai */
+#down {
+    color: #ff0000;
+}
+
+/* yeh asse bhi khud hi select kar sakte hai */
+/* ek rgb ki jaghe hsl bhi hota hai */
+/* yeh rgb ke piche (a) likha hai yeh color ki brightness ke liye hai yeh khud hi select kar sakte hai */
+#pain {
+    color: rgba(0, 208, 255, 0.847);
+}

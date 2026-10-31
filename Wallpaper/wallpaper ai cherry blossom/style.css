@@ -1,0 +1,289 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #080918;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 30%, #43205f 0%, transparent 38%),
+    linear-gradient(#090a20 0%, #20133c 60%, #090d20 100%);
+}
+
+.moon {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  right: 17%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff8fa, #ffb8df 45%, #df6ec4 80%);
+  box-shadow: 0 0 35px #ff8bd988, 0 0 100px #c04be755;
+  animation: moon-glow 5s ease-in-out infinite alternate;
+}
+
+.mountain {
+  position: absolute;
+  bottom: 24%;
+  width: 0;
+  height: 0;
+  border-left: 40vw solid transparent;
+  border-right: 40vw solid transparent;
+}
+
+.mountain-back {
+  left: 10%;
+  border-bottom: 330px solid #27203f;
+  filter: drop-shadow(0 0 20px #b25cb633);
+}
+
+.mountain-front {
+  left: 22%;
+  bottom: 23%;
+  border-left-width: 25vw;
+  border-right-width: 25vw;
+  border-bottom: 260px solid #11172d;
+}
+
+.lake {
+  position: absolute;
+  bottom: 0;
+  height: 29%;
+  width: 100%;
+  background:
+    repeating-linear-gradient(
+      175deg,
+      transparent 0 14px,
+      #ef8bc51b 15px 17px,
+      transparent 18px 29px
+    ),
+    linear-gradient(#27153f, #080b19);
+}
+
+.reflection {
+  position: absolute;
+  right: 19%;
+  bottom: 3%;
+  width: 120px;
+  height: 28%;
+  background: linear-gradient(
+    to bottom,
+    #ffb2dfbb,
+    #d35ad477 30%,
+    #9a4ed522 70%,
+    transparent
+  );
+  filter: blur(18px);
+  animation: water 3s ease-in-out infinite alternate;
+}
+
+.tree {
+  position: absolute;
+  z-index: 2;
+  bottom: 15%;
+  width: 360px;
+  height: 580px;
+}
+
+.tree-left {
+  left: -30px;
+}
+
+.tree-right {
+  right: -90px;
+  transform: scaleX(-1) scale(.75);
+  transform-origin: bottom center;
+}
+
+.trunk {
+  position: absolute;
+  bottom: 0;
+  left: 43%;
+  width: 28px;
+  height: 390px;
+  border-radius: 70% 10% 0 0;
+  background: linear-gradient(90deg, #160f25, #49304d, #1b1226);
+  transform: rotate(9deg);
+}
+
+.branch {
+  position: absolute;
+  left: 42%;
+  bottom: 250px;
+  width: 260px;
+  height: 13px;
+  border-radius: 100%;
+  background: #342039;
+  transform: rotate(-35deg);
+  transform-origin: left center;
+}
+
+.branch-two {
+  bottom: 330px;
+  width: 220px;
+  transform: rotate(-55deg);
+}
+
+.blossoms {
+  position: absolute;
+  inset: 0;
+}
+
+.blossom {
+  position: absolute;
+  width: var(--size, 48px);
+  height: var(--size, 48px);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #ffdfed 0 8%, transparent 10%),
+    radial-gradient(ellipse at 50% 15%, #ffb4e0 0 20%, transparent 23%),
+    radial-gradient(ellipse at 85% 45%, #fa8fce 0 20%, transparent 23%),
+    radial-gradient(ellipse at 65% 85%, #f8a6db 0 20%, transparent 23%),
+    radial-gradient(ellipse at 25% 80%, #ffb4e5 0 20%, transparent 23%),
+    radial-gradient(ellipse at 15% 40%, #e879c6 0 20%, transparent 23%);
+  filter: drop-shadow(0 0 5px #ff7ac955);
+  animation: blossom-sway var(--duration, 4s) ease-in-out infinite alternate;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #ffd5f0;
+  box-shadow: 0 0 7px #ff9de8;
+  animation: twinkle var(--duration, 3s) ease-in-out infinite alternate;
+}
+
+.petal {
+  position: absolute;
+  top: -30px;
+  width: 12px;
+  height: 18px;
+  border-radius: 80% 10% 80% 10%;
+  background: linear-gradient(135deg, #ffe1f1, #ef72bd);
+  box-shadow: 0 0 9px #f58bc655;
+  animation: fall var(--duration, 10s) linear infinite;
+}
+
+.caption {
+  position: absolute;
+  z-index: 4;
+  left: 5%;
+  bottom: 8%;
+  text-shadow: 0 2px 18px #080818;
+  pointer-events: none;
+}
+
+.caption span {
+  color: #ffb8e5;
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+.caption h1 {
+  margin: 12px 0;
+  font-size: clamp(30px, 5vw, 65px);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.caption p {
+  color: #d7c4e7;
+  font-size: 14px;
+}
+
+.cursor-glow {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    #ed65e52b,
+    #9d4edd17 35%,
+    transparent 70%
+  );
+}
+
+@keyframes fall {
+  0% {
+    transform: translate3d(0, -5vh, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(80px, 50vh, 0) rotate(300deg);
+  }
+  100% {
+    transform: translate3d(-40px, 110vh, 0) rotate(720deg);
+  }
+}
+
+@keyframes blossom-sway {
+  from { transform: rotate(-5deg) scale(.95); }
+  to { transform: rotate(6deg) scale(1.05); }
+}
+
+@keyframes twinkle {
+  from { opacity: .2; }
+  to { opacity: 1; }
+}
+
+@keyframes moon-glow {
+  from { box-shadow: 0 0 35px #ff8bd966, 0 0 70px #c04be733; }
+  to { box-shadow: 0 0 55px #ff8bd9bb, 0 0 130px #c04be766; }
+}
+
+@keyframes water {
+  from { opacity: .4; transform: scaleX(.8); }
+  to { opacity: .9; transform: scaleX(1.2); }
+}
+
+@media (max-width: 600px) {
+  .moon {
+    width: 90px;
+    height: 90px;
+    right: 12%;
+  }
+
+  .tree {
+    transform: scale(.7);
+    transform-origin: bottom left;
+  }
+
+  .tree-right {
+    display: none;
+  }
+
+  .caption {
+    bottom: 6%;
+  }
+
+  .caption p {
+    max-width: 280px;
+  }
+}

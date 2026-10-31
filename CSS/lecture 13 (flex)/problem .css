@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid red;
+    /* esse bhi cards mein gap de skate hai */
+    /* margin: 10px; */
+}
+
+.wrapper {
+      height: 100vh;
+
+    border: 3px solid red;
+
+    /* yeh flex se cards side by side aa jaye ge  by default */
+  display: flex;
+
+  /* column se niche niche ho jaye gi */
+  /* flex-direction: column; */
+
+  /* flex-direction: row-reverse; esse row ulti ho jaye gi back */
+  /* aese hi column-reverse bhi hai */
+  /* flex-direction: row-reverse; */
+  flex-direction: row;
+
+  /* yeh center mein kar dega */
+  /* aur by default row mein hoga matlab side by side */
+  /* aur flex direction=column kardu thoo niche niche center mein aa jaye gi */
+  /* justify-content: center; */
+
+  /* yeh end mein le jaye gi */
+  /* justify-content: end;*/
+
+  /* yeh center mein karke har anime card ko equal space de dega */
+  /* esme start and end wali space unequal hogi */
+  /* space around matlab ek anime card ke around wali space equal hogi */
+  /* justify-content: space-around; */
+
+  /* yeh space ko side se end tak equal space dega */
+  /* space between matlab bich wali space aqual hogi */
+  /* justify-content: space-between; */
+
+  /* yeh equaly space dega start , end , between sab jaghe equal space dega */
+/* justify-content: space-evenly; */
+
+/* yeh center mein karegi but column wise niche */
+/* align-items: center; */
+/* agar contact center mein chahiye thoo justify-content=center kar do thoo x-axis and y-axis center ho jaye gi */
+
+/* bottom mein jaye gi */
+/*   flex-direction: column; yeh saath lga di thoo right top mein aa jaye gi */
+align-items: end;
+
+/* starting mein chale jaye gi */
+/* align-items: start; */
+
+/* esse gap de sakte hai anime cards ke bich */
+gap: 10px;
+
+/* eske ke baad problem 2 mein hai */
+}
+

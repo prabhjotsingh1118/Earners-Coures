@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table,
+        tr,
+        td,
+        th,
+        tfoot {
+            /* yeh eliye hota hai kiyuki css ki property hai esse jese table,td etc likha hai thoo yeh property un tags par apply hoo gaye gi */
+            /* aur th (table head) high light ho jata hai aur centre mein aa jata hai */
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>tables</h1>
+        <table>
+
+            <caption>students score</caption>
+
+            <thead>
+                <tr>
+                    <th>students/subjects</th>
+                    <th>maths</th>
+                    <th>hindi</th>
+                    <th>english</th>
+                    <th>scince</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+
+                <h2>students score</h2>
+
+                <tr>
+                    <td>goku</td>
+                    <td>70</td>
+                    <td>80</td>
+                    <td>84</td>
+                    <td>98</td>
+                </tr>
+
+                <tr>
+                    <td>gojo</td>
+                    <td>66</td>
+                    <td>78</td>
+                    <td>89</td>
+                    <td>98</td>
+                </tr>
+
+                <tr>
+                    <td>naruto</td>
+                    <td>78</td>
+                    <td>70</td>
+                    <td>56</td>
+                    <td>65</td>
+                </tr>
+
+                <tr>
+                    <td>luffyt</td>
+                    <td>94</td>
+                    <td>98</td>
+                    <td>88</td>
+                    <td>100</td>
+                </tr>
+
+                <!-- agar kisi tag ko multiple by koi bhi number thoo woo unti baar print hoo jaye gaa -->
+                <!-- jese mene tr into 4 kiya thoo tr 4 baar print hooo jaye gaa -->
+            </tbody>
+
+            <tfoot>
+                <th>total</th>
+                <th>100</th>
+                <th>200</th>
+                <th>300</th>
+                <th>400</th>
+            </tfoot>
+
+
+        </table>
+
+        <h2>rowaspan and colspan</h2>
+
+        <table>
+
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2" style="text-align: center;">average</th>
+                <th rowspan="2">red eyes</th>
+            </tr>
+
+            <tr>
+                <th>height</th>
+                <th>weight</th>
+            </tr>
+
+            <tr>
+                <td>males</td>
+                <td>1.9</td>
+                <td>0.0003</td>
+                <td>40%</td>
+            </tr>
+
+            <tr>
+                <td>females</td>
+                <td>1.9</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+
+            <caption style="text-align: center;"> a </caption>
+
+            <!-- yeh joo style="text-align: center hai je center mein lane ke kaam aata hai -->
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

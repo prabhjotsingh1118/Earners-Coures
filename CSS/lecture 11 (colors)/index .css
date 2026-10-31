@@ -1,0 +1,98 @@
+/* yeh colors ko mix karke ke banta hai */
+#wrapper {
+    background: linear-gradient(red, blue, green);
+}
+
+/* aese hi to top=top par jana , to right=right par jana , to left=left par jana */
+#this {
+    background: linear-gradient(to right, red, green);
+}
+
+/* yeh tirsha jane ke liye hai */
+#his {
+    background: linear-gradient(44deg, red, blue, green, yellow);
+    height: 400px;
+}
+
+#anime {
+    background: radial-gradient(red, green);
+    height: 200px;
+}
+
+#world {
+    background: radial-gradient(circle, red, green);
+    height: 200px;
+}
+
+#goku {
+    background: conic-gradient(red, blue, yellow);
+    height: 200px;
+}
+
+#name {
+    background-image: url(https://static.crunchyroll.com/cr-acquisition/assets/img/start/hero/us-global/background-desktop.jpg);
+
+    /* esse image repeat nahi hogi */
+    /* aur bhi option hai dekh sakte hai */
+    /* lecture 11 time 38 min */
+    background-repeat: no-repeat;
+    /* yeh khud adjust bhi kar skate hai height weigth se */
+    height: 1000px;
+    /* isse puri image hi aageyi bina cut kiye */
+    /* agar contain ki jaghe cover karr diya thoo image cut ho jaye gi */
+    background-size: contain;
+}
+
+/* yeh border ke liye hai */
+/* yeh border ko design bhi de sakte hai jese dotted etc baki search kar sakte hai */
+#image {
+    border-style: solid;
+    border-width: 20px;
+    border-color: blue;
+    height: 100px;
+
+    /* (border : 2px solid blue;) yeh aese bhi likh sakte hai */
+}
+
+
+/* yeh ek side line lgane ke kaam aati hai */
+/* yeh top left right aese margi likh sakte hai */
+#you {
+    border-left: 10px solid blue;
+}
+
+/* yeh detail mein lecture 11 time 1h 1min */
+#blue {
+    /* agar left hta de thoo yeh charo side apply ho jaye gi */
+    border-left: 12px solid blue;
+    border-radius: 100px;
+    height: 400px;
+}
+
+
+/* yeh charo sides se space dene ke kaam aati hai */
+/* yeh padding rigth left top bottom karke bhi lga sakte hai */
+/* yeh aese bhi kar skate hai padding : top right bottom left */
+/*  aese bhi kar sakte hai padding : 4px  8px 4px 8px */
+#zone {
+    padding: 100px;
+    border: 10px solid red;
+    height: 400px;
+}
+
+/* yeh detail mein lecture 11 time 1h 42min */
+#monkey {
+    margin: auto;
+    border: 20px solid red;
+}
+ 
+/* detail video lecture 11 time 1h 47min */
+span {
+     border: 8px solid red;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+}
+
+
+/* lecture 11 dobara dekhna hai */

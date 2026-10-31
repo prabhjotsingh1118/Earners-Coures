@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+    <form action="" id="form">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="username" placeholder="Enter anime name">
+            <span class="error" style="color: red;"></span>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email anime name">
+            <span class="error" style="color: red;"></span>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="text" id="password" placeholder="Password anime name"> <span id="error"
+                style="color: red;"></span>
+            <span class="error" style="color: red;"></span>
+        </div>
+
+        <p id="passwordHint" class="hidden">only 8 charcters allowed</p>
+
+        <div>
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio" placeholder="enter anime names"></textarea>
+            <p id="remainletter"></p>
+            <span class="error" style="color: red;"></span>
+        </div>
+
+        <div>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox"> i agree anime</label>
+            <span class="error" style="color: red;"></span>
+        </div>
+
+        <div>
+            <label for="animecr">select your anime:</label>
+
+            <select name="animecr" id="animecr">
+                <option value="goku">goku</option>
+                <option value="madara">madara</option>
+                <option value="vegeta">vegeta</option>
+                <option value="obito">obito</option>
+            </select>
+            <span class="error" style="color: red;"></span>
+        </div>
+
+
+
+        <button id="btn" type="submit">Login</button>
+    </form>
+
+    <h1 class="hidden">Create successfully</h1>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

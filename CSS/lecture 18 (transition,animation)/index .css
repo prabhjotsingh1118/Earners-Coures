@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(97, 224, 224);
+    /* kitni der mein transition aayega */
+    transition-duration: 2s;
+    /* transition-property: all; */
+    /* esse start slow , between fast , end slow  */
+    /* transition-timing-function: ease-in-out ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* yeh time control karne ke liye hota hai kitni der mein hoga , jayega */
+    transition-delay: 2s;
+
+    /* all sabhi par, 5s duration , property linear , delay 2s */
+    /* transition: all 5s linear 2s; */
+
+    /* Ek move karne ke liye hai but yeh dono ek saath kaam nahi kargi  */
+    /* transform: translateX(100px);
+    transform: translateY(100px); */
+    /* thoo yeh property lagegi */
+}
+
+
+
+/*  (>) esse hover parent par kiya par effect div par chala jayega */
+/* .container:hover>div { */
+/* background-color: aqua; */
+/* width: 1300px; */
+/* transform: translate(100px,100px); */
+
+
+
+/* Yeh size ke liye hai scaleY height (Verticaly) And scaleX width (width) And scale sabhi sides ke liye  */
+/* transform: scaleY(3);
+     transform: scaleX(3); */
+/* transform: scale(2); */
+/* Translate and Scale ek saath karne ke liye  */
+/* transform: translate(100px, 100px) scale(2); */
+
+
+/* } */
+
+
+
+/* .linear {
+    transition-timing-function: linear;
+    background-color: rgb(0, 202, 34);
+}
+
+.ease {
+    transition-timing-function: ease;
+    background-color: rgb(0, 125, 202);
+}
+
+.ease-in {
+    transition-timing-function: ease-in;
+    background-color: rgb(202, 0, 27);
+}
+
+.ease-out {
+    transition-timing-function: ease-out;
+    background-color: rgb(195, 202, 0);
+}
+
+.ease-in-out {
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: rgb(148, 0, 202);
+} */
+
+.btn {
+    background-color: purple;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: none;
+    margin: 50px;
+    cursor: pointer;
+    transition-duration: 0.6s;
+
+    /* theda ho jayega */
+    /* transform: skew(20deg); */
+}
+
+/* .btn:hover {
+    transform: translate(0, -5px) scale(1.1) rotate(30deg) skew(20deg);
+
+    yeh rotate karne ke liya hota hai
+    transform: rotate(30deg);
+    asse bhi likh sakte hai
+    transform: translate(0, -5px) scale(1.1) rotate(30deg);
+
+    box-shadow: 0px 10px 10px black;
+} */
+
+
+/* yeh box upar se hi copy kiya hai */
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(97, 224, 224);
+    /* kitni der mein transition aayega */
+    transition-duration: 2s;
+    /* transition-property: all; */
+    /* esse start slow , between fast , end slow  */
+    /* transition-timing-function: ease-in-out ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* yeh time control karne ke liye hota hai kitni der mein hoga , jayega */
+    /* transition-delay: 2s; */
+
+    /* all sabhi par, 5s duration , property linear , delay 2s */
+    /* transition: all 5s linear 2s; */
+
+    /* Ek move karne ke liye hai but yeh dono ek saath kaam nahi kargi  */
+    /* transform: translateX(100px);
+    transform: translateY(100px); */
+    /* thoo yeh property lagegi */
+
+}
+
+.btn {
+    animation: name 2s linear 0s infinite alternate;
+    /* animation-name: anime; */
+    /* animation-name: world; */
+    /* animation-duration: 2s; */
+    /* animation-iteration-count: 3; */
+    /* animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+    animation-fill-mode: forwards; */
+}
+
+
+@keyframes anime {
+
+    /* jaha se jana hai */
+    from {
+        background-color: red;
+        transform: translate(30px, 50px);
+    }
+
+    /* jaha tak jana hai */
+    to {
+        background-color: green;
+        transform: translate(30p, 50px);
+    }
+
+}
+
+@keyframes world {
+    0% {
+        background-color: red;
+        right: 80%;
+    }
+
+    28% {
+        background-color: purple;
+        /* width: 800px; */
+    }
+
+    54% {
+        background-color: #02058d9e;
+        /* width: 400px; */
+    }
+
+    88% {
+        background-color: darkgoldenrod;
+        /* width: 900px; */
+    }
+
+    100% {
+        background-color: green;
+        /* transform: translate(30px, 50px); */
+        /* width: 1000px; */
+        right: 0%;
+    }
+
+}
+
+@keyframes name {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        /* transform: translate(0, -5px) scale(1.1) rotate(30deg); */
+        transform: rotate(360deg);
+    }
+}

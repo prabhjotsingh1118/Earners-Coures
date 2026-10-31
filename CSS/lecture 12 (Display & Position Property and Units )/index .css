@@ -1,0 +1,88 @@
+/* yeh universal selector hai esse sab kuch select ho jaye ga */
+/* yaha kuch padding,margin,url(https://docs.google.com/document/?usp%3Ddocs_alc%26authuser%3D0)box-sizing diye hai */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#anime {
+    border: 1px solid;
+}
+
+/* essme width height kaam nahi karti */
+/* yeh inline block property se width , height apply ho jati hai */
+span {
+    display: inline-block;
+    border: 1px solid red;
+    width: 40px;
+    height: 40px;
+}
+
+/* yeh display none and visibility hidden dono ek hi kaam karte hai */
+/* display none ek sisaab se delete kar deta hai inspect kar ke check kar sakte hai */
+/* visibilty hidden chiij hode kar deta hai */
+p {
+    border: 1px solid black;
+    /* display: none; */
+    visibility: hidden;
+}
+
+/* yeh opposite kaam kare gi jese leftt diya thoo rigth side gi yeh push karegi*/
+/* yaha jo left wala hai yeh position ke saath hi kaam karegi */
+/* kiyuki by default yeh position set hoti hai */
+/* aur isme do property ek saath nahi kaam karti hai */
+/* jese left aurt right ek saath lga di thoo yeh kaam nahi karegi */
+/* yeh mene comment kiya hai BOX ko karne ke liye */
+/* #world {
+    display: inline-block;
+    border: 1px solid red;
+    width: 100px;
+    height: 60px;
+    position: relative;
+    left: 40px;
+    top: 4px;
+} */
+
+/* yeh .box class ke liye hai */
+/* yeh margin top and bottom space dene ke liye hai */
+#this {
+    border: 8px solid rgba(47, 0, 255, 0.701);
+    width: 27vw;
+    height: 6vw;
+}
+
+.box {
+    display: inline-block;
+    border: 1px solid red;
+    width: 100px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: greenyellow;
+    text-align: center;
+    
+}
+
+
+#you {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    border: 2px solid black;
+}
+
+
+/* esse position fixed ho jati hai matlab puri website chalti rahe gi woo jahi rahe gi */
+#ball {
+     position: fixed;
+     left: 1000px;
+}
+    
+/* lecture 12 time 2h 16min */
+#this {
+    position: sticky;
+    top: 20px;
+} 

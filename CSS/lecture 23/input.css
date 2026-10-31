@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.bg-red-58 {
+    background-color: rgba(124, 33, 33, 0.332);
+}
+
+@theme {
+    --color-red-58: #523442;
+    --color-anime : #523442;
+}

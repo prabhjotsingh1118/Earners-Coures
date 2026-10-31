@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,
+        tr,
+        td,
+        th,
+        tfoot {
+            /* yeh eliye hota hai kiyuki css ki property hai esse jese table,td etc likha hai thoo yeh property un tags par apply hoo gaye gi */
+            /* aur th (table head) high light ho jata hai aur centre mein aa jata hai */
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <table>
+
+            <!-- emit short cut key tr*7>td*6 yeh hai -->
+
+            <tr>
+                <th colspan="6">time table</th>
+            </tr>
+
+            <tr>
+                <th rowspan="6">hours</th>
+                <td>mon</td>
+                <td>tues</td>
+                <td>wed</td>
+                <td>thrus</td>
+                <td>fri</td>
+            </tr>
+
+            <tr>
+                <td>science</td>
+                <td>maths</td>
+                <td>hindi</td>
+                <td>english</td>
+                <td>sanskrit</td>
+            </tr>
+
+            <tr>
+                <td>science</td>
+                <td>maths</td>
+                <td>hindi</td>
+                <td>english</td>
+                <td>sanskrit</td>
+            </tr>
+
+            <tr>
+                <th colspan="5">Lunch</th>
+            </tr>
+
+            <tr>
+                <td>science</td>
+                <td>maths</td>
+                <td>hindi</td>
+                <td>english</td>
+                <th rowspan="2">project</th>
+            </tr>
+
+            <tr>
+                <td>science</td>
+                <td>maths</td>
+                <td>hindi</td>
+                <td>maths</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

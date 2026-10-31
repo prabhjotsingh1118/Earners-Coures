@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* .grid-container {
+    display: grid;
+    width: 50vw;
+    margin: auto;
+    grid-template-columns: 100px 150px 80px;
+    border: 1pc solid red;
+} */
+
+
+
+/* .grid-container {
+    display: grid;
+    width: 50%;
+    margin: auto;
+    grid-template-columns: 30% 10% 10%;
+    border: 1px solid red;
+} */
+
+
+
+
+.grid-container {
+    display: grid;
+
+    /* width: 50%; */
+    width: 80vw;
+
+    /* height: 500px; */
+    /* height like view port */
+    min-height: 50vh;
+
+    /* jitna content hoga utni hi height hogi */
+    /* height: auto; */
+
+    margin: auto;
+
+    /* yeh gaps ko absorb nahi karta hai yeh content ko bahar nikaal deta hai */
+    /* grid-template-columns: 30% 40% 30%; */
+
+    /* for real */
+    /* yeh gaps ko absorb kar leti hai */
+
+
+    /* yeh esse inspect karne par wrap bhi kar dega */
+    /* autofit pure ko bhareta hai */
+    /* auto fill jitni jarurt hai unti ki space lega */
+    grid-template-columns: repeat(auto-fill,200px);
+
+    /* grid-template-rows: 200px 200px; */
+    /* grid-template-rows: 1fr 1fr ; agar 1fr aur dege thoo blank space aa jaye gi */
+    /* grid-template-rows: 1fr 1fr ; */
+    /* grid-template-rows: repeat(4, 2fr); */
+    /* grid-auto-rows: 1fr; */
+
+    /* grid mein wrap nahi hota hai thoo yeh esliye hai wrap ke liye */
+    /* grid-auto-rows: 300px; */
+    /* kaha 1fr esliye hai kiyu ki agar space hai thoo puri hi lelo */
+    grid-auto-rows: minmax(200px, 1fr);
+
+
+    border: 1px solid red;
+
+    /* gap: 10px; */
+    /* row-gap: 10px; */
+    /* column-gap: 10px; */
+    gap: 10px 20px;
+}
+
+.grid-item {
+    background-color: aqua;
+    border: 1px solid black;
+}

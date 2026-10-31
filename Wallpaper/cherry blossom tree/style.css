@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wallpaper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #170b16;
+}
+
+.wallpaper {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Original cherry blossom photo */
+/* .background {
+  position: absolute;
+  inset: -2%;
+  background-image: url("./cherry-path.jpg");
+  background-size: cover;
+  background-position: center 48%;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
+  animation: gentleWind 12s ease-in-out infinite alternate,
+             lampBrightness 5s ease-in-out infinite alternate;
+  will-change: transform, filter;
+} */
+
+
+.background {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("./cherry-path.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Image bilkul static rahegi */
+  transform: none;
+  animation: none;
+  filter: none;
+}
+
+
+/* Soft pink atmosphere */
+.pink-atmosphere {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 42%,
+      transparent 25%,
+      rgba(255, 105, 190, 0.10) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 160, 220, 0.06),
+      transparent 45%,
+      rgba(20, 5, 20, 0.18)
+    );
+  pointer-events: none;
+}
+
+/* Gentle glow over the pathway lights */
+.lamp-glow {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 155, 218, 0.035);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: lightPulse 3.5s ease-in-out infinite alternate;
+}
+
+/* Falling cherry petals */
+#petals {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Dark edges for a cinematic look */
+.vignette {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 100px rgba(20, 0, 20, 0.24);
+  pointer-events: none;
+}
+
+@keyframes gentleWind {
+  0% {
+    transform: scale(1.03) translate3d(-0.25%, 0, 0);
+  }
+  50% {
+    transform: scale(1.045) translate3d(0.2%, -0.15%, 0);
+  }
+  100% {
+    transform: scale(1.03) translate3d(0.25%, 0, 0);
+  }
+}
+
+@keyframes lampBrightness {
+  0% {
+    filter: brightness(0.97) saturate(1);
+  }
+  100% {
+    filter: brightness(1.05) saturate(1.06);
+  }
+}
+
+@keyframes lightPulse {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background,
+  .lamp-glow {
+    animation: none;
+  }
+}

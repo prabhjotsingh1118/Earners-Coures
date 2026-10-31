@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="output.css">
+    <!-- <link rel="stylesheet" href="input.css"> -->
+</head>
+
+<body class="font-sans antialiased">
+
+    <header class="border-b border-(--border-subtle) fixed top-0 inset-x-0 backdrop-blur-lg">
+
+        <nav class=" max-w-6xl m-auto px-6 h-16 flex items-center justify-between ">
+
+            <a href="index .html"
+                class="  flex items-center text-sm gap-2 text-(--text-3) hover:text-(--text-1) transition-all duration-200">
+                <svg class="w-3.5 h-3.5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                Portfolio
+
+            </a>
+
+
+            <a href="index .html" class="text-sm font-bold">Prabhjot<strong class="text-amber-300">.</strong>dev</a>
+
+        </nav>
+
+    </header>
+
+
+    <div class=" max-w-6xl mx-auto px-6 pt-16 pb-12  border-b border-(--border)  ">
+
+        <div class="max-w-2xl pt-16">
+            <div class=" flex gap-3 text-xs text-(--text-4) items-center mb-6">
+                <span
+                    class="text-(--accent) bg-[#ffe10017] rounded-full px-3 py-1 border border-(--accent-border)  ">DveOps</span>
+                <span class="text-(--text-4) relative -top-1">.</span>
+                <span class="text-(--text-4) ">7 min read</span>
+                <span class="text-(--text-4) relative -top-1">.</span>
+                <span class="text-(--text-4)">Beginner Friendly</span>
+            </div>
+
+
+            <h1 class="text-4xl font-serif md:text-5xl font-bold leading-tight tracking-tight mt-6 mb-5 ">Docker
+                Explained:
+                <br>
+                Why Every Developer <br>Should Learn Containers
+            </h1>
+
+            <p class="text-(--text-2) text-lg font-extralight leading-7.5 ">If you've ever heard "it works on my
+                machine" -
+                Docker is the fix. Here's everything you need to know to get
+                started, explained simply.</p>
+
+            <div class="flex gap-4 mt-7.5  ">
+                <div
+                    class="text-(--accent ) border border-(--accent-border) w-9 h-9 bg-(--accent-dim) rounded-full text-(--accent) flex items-center justify-center font-bold ">
+                    PS</div>
+                <div>
+                    <p class="text-sm font-medium">Prabhjot Singh</p>
+                    <p class="text-xs text-(--text-3)">August 13,2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="max-w-6xl mx-auto px-6 pt-12">
+
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+            <aside class="hidden lg:block w-44 shrink-0 ">
+
+                <div class="sticky top-24">
+                    <div class=" text-xs font-medium text-(--text-4) tracking-widest uppercase mb-5">Contents</div>
+
+                    <nav class=" flex flex-col gap-3     ">
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">The
+                            problem</a>
+
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">What
+                            is Docker</a>
+
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">Containers
+                            vs VMs</a>
+
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">Key
+                            concepts</a>
+
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">Docker
+                            Compose</a>
+
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">Why
+                            teams use it</a>
+
+                        <a href=""
+                            class="text-xs text-(--text-4) hover:text-(--accent) transition-colors duration-200 leading-relaxed">Where
+                            to start</a>
+                    </nav>
+                </div>
+
+            </aside>
+
+            <article class="flex-1 min-w-0 max-w-2xl">
+
+                <section class="mb-14">
+
+                    <section>
+                        <p class="text-(--text-2) leading-8 ">
+                            Picture this: you spend two days building a feature on your laptop. Tests pass. Everything
+                            works.
+                            You
+                            push
+                            the code, your teammate pulls it down - and nothing runs. Error messages everywhere. Hours
+                            of
+                            debugging
+                            later, you discover the issue: different Node.js versions, a missing environment variable,
+                            or a
+                            system
+                            dependency that only exists on your machine.
+                        </p>
+
+
+                        <p class="text-(--text-3) leading-8 mt-5">
+                            This problem is so common in software development that it has its own sarcastic phrase.
+                            Developers
+                            call
+                            it the "works on my machine" syndrome - and it has wasted more hours of developer time than
+                            almost
+                            anything else in the industry.
+                        </p>
+
+
+                        <blockquote class="italic leading-8 text-base pl-6 my-8 py-1 border-l-2 border-(--accent)">"It
+                            works on my machine" is not a solution. Docker makes it so the machine
+                            doesn't
+                            matter at all.
+                        </blockquote>
+
+
+                        <p class="text-(--text-3) mb-12 leading-8 text-base">
+                            Docker was created to solve exactly this problem. And it does it so well that it's now one
+                            of
+                            the
+                            most
+                            widely used tools in all of software development - from small startups to Google-scale
+                            companies.
+                        </p>
+
+                    </section>
+
+                    <section class="mb-14">
+                        <h2 class="text-2xl font-serif font-bold text-(--text-1) mb-5 pb-3 border-b border-(--border)">
+                            What Exactly Is Docker?
+                        </h2>
+
+
+                        <p class="text-(--text-3) mb-5 leading-8 text-base">Docker is a platform that lets you package
+                            your application -
+                            along
+                            with
+                            everything it needs to run - into a single, portable unit called a
+                            <strong class="text-white">container</strong>.
+                        </p>
+
+                        <p class="mb-5 text-(--text-3) leading-8 text-base">
+                            Think of it like a lunchbox. Instead of telling someone "go to the store, buy bread, find
+                            mustard, and oh by the way you need a specific brand of knife" - you just hand them the
+                            lunchbox. Everything they need is already inside, pre-packed, and ready to go. No assembly
+                            required.
+                        </p>
+
+                        <p class="mb-5 text-(--text-3) leading-8 text-base">
+                            That lunchbox runs the same way whether you open it on your laptop, your teammate's Windows
+                            PC,
+                            a server in Germany, or a cloud machine in Singapore. The contents - and how they behave -
+                            are
+                            always identical.
+                        </p>
+
+                    </section>
+
+                    <section>
+
+                        <h2 class="text-2xl font-serif font-bold text-(--text-1) mb-5 pb-3 border-b border-(--border)">
+                            Containers vs Virtual Machines
+                        </h2>
+
+                        <p class="text-(--text-3) leading-8 text-base mb-6">
+                            Before Docker, the standard answer to "I need an isolated environment" was a <strong
+                                class="text-white">Virtual Machine</strong>
+                            <strong class="text-white">(VM)</strong>. VMs work - but they're heavy. Each VM runs an
+                            entire operating system on top of your
+                            operating system. They take minutes to boot, eat up gigabytes of RAM, and feel sluggish.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-6 mb-6 ">
+
+                            <div
+                                class="flex-1 bg-(--surface-solid) p-5 border border-(--border) rounded-xl hover:hover:scale-110 transition duration-700 hover:border-(--accent)">
+
+                                <div class="flex gap-2 items-center mb-3">
+                                    <div class="bg-red-400 rounded-full w-2 h-2"></div>
+                                    <p class="text-sm font-semibold text-(--text-1)">Virtual Machine</p>
+                                </div>
+
+                                <ul class="space-y-2">
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="bg-(--text-3) rounded-full w-1 h-1 my-2"></span>
+                                        <span>Full OS inside every VM (gigabytes)</span>
+                                    </li>
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="bg-(--text-3) rounded-full w-1 h-1 my-2"></span>
+                                        <span>Takes minutes to start</span>
+                                    </li>
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="bg-(--text-3) rounded-full w-1 h-1 my-2"></span>
+                                        <span>Full OS inside every VM (gigabytes)</span>
+                                    </li>
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="bg-(--text-3) rounded-full w-1 h-1 my-2"></span>
+                                        <span>Heavy on RAM and CPU</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div
+                                class="flex-1 bg-(--surface-solid) p-5 border border-(--accent-border) rounded-xl hover:hover:scale-110 transition duration-700 hover:border-(--accent)">
+
+                                <div class="flex gap-2 items-center mb-3">
+                                    <div class="bg-emerald-400 w-2 h-2 rounded-full"></div>
+                                    <p>Docker Container</p>
+                                </div>
+
+                                <ul class="space-y-2">
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="text-(--accent)">✓</span>
+                                        <span>Shares your OS kernel (megabytes)</span>
+                                    </li>
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="text-(--accent)">✓</span>
+                                        <span>Starts in under a second</span>
+                                    </li>
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="text-(--accent)">✓</span>
+                                        <span>Lightweight and efficient</span>
+                                    </li>
+                                    <li class="text-xs text-(--text-3) leading-5 flex items-start gap-2">
+                                        <span class="text-(--accent)">✓</span>
+                                        <span>Easy to share via Docker Hub</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                </section>
+
+            </article>
+        </div>
+
+    </div>
+
+
+
+
+    <section class="border-t border-(--border) py-10">
+
+        <div class="flex justify-center max-w-6xl mx-auto px-6 text-xs text-(--text-4)">
+
+            © 2024 Nishant Saini. All rights reserved.
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

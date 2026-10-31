@@ -1,0 +1,148 @@
+/* specificity (priority) */
+/* sabse pehle inline css > id > class > element > * (universal selector) */
+
+
+/* yeh chij index .html se link hai */
+span {
+    color: white;
+    background-color: blue;
+}
+
+
+h3 {
+    color: chartreuse;
+}
+
+
+/* (,) yeh lga ke hi chale gaa */
+a,
+li {
+    color: deepskyblue;
+}
+
+/* yeh link hai 1 index .html line no. 47 */
+/* yeh classes multiple bhi bna sakte hai jese ek hello 2 aur dusri hello 4 */
+.hello {
+    color: blue;
+} 
+
+
+/* ek universal selector hota hai jo sab kuch select karne ke kaam aata hai */
+* {
+    color: darkorange;
+}
+
+/* yeh hota hai universal selector */
+/* abhi yeh kaam nahi kar raha hai kiyuki pehle se hi property lagi hue hai */
+
+
+.games {
+    color: hotpink;
+}
+
+/* yeh id selector hai */
+#anime {
+    color: crimson;
+} 
+
+
+/* div ke andar jinte bhi (p) hai uss par property apply ho jaye ge */
+div p {
+    color: forestgreen;
+
+/* yeh adjacent sibling hai */
+/* adjacent sibling matlab plus se just niche wala */
+/* agar p + p likhe thoo p ke niche jitne bhi sibling hai unn par properrrty apply ho jaye gi */
+/* par hello a wala p par apply nahi hogi kiyuki hello a wale p ke upar koi bhi p nahi hai */
+/* aur yeh property tag ke just next wale par apply hoti hai */
+}
+a+p {
+    color: aqua;
+}
+
+/* general sibling matlab usse aage jitne bhi hai */
+a ~ p {
+    color: darkred;
+}
+
+
+/* mouse ko h1 mein jo bhi likha hai use par mouse point rakh kar uska color woo hii hoga jo property likhi hai */
+h1:hover{
+    background-color: aqua;
+}
+
+/* mouse ko h1 mein jo bhi likha hai use par mouse point rakh kar uska color woo hii hoga jo property likhi hai */
+li:hover{
+    color: blue;
+}
+
+/* yeh tag sirf first wale ka color change kare ga baki sab vesa hi rahe ga */
+/* jese ek list hai aur uskme aur usme three items hai 1 2 3 tho 1 wale ka color change ho jaye ga baki sab mein koi change nahi aaye ga */
+li:first-child{
+    color: darkgreen;
+}
+
+/* yeh bhi list mein hi apply hota hai jese ek list mein apple, mango, pineapple, orange items hai thoo agar mein tho agar mene */
+/* brackets mein 3 likha thoo 3 no wala matlab pineapple ka color change ho jaye ga */
+li:nth-child(3){
+    color: chartreuse;
+}
+
+
+/* <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3 (darkgoldenrod)</li>
+  <li>Item 4</li>
+  <li>Item 5 (darkgoldenrod)</li>
+  <li>Item 6</li>
+  <li>Item 7 (darkgoldenrod)</li>
+</ul> */
+/* agar mene 2n+3 likha thoo yeh aaye ga yeh ek example hai niche wale tag ki */
+
+/* <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4 (darkgoldenrod)</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+  <li>Item 8 (darkgoldenrod)</li>
+  <li>Item 9</li>
+  <li>Item 10</li>
+  <li>Item 11</li>
+  <li>Item 12 (darkgoldenrod)</li>
+</ul> */
+/* yeh bhi ek example hai agar mene 4n+4 ki jaghe 4n+4 likha thoo yeh hoga */
+li:nth-child(2n+3){
+    color: darkgoldenrod;
+}
+
+
+/* yeh content ke aage ja piche likhne ko hai */
+/* yeh content ke aage ja piche kuch add karne ke liye hai like ek letter */
+h3::after {
+    content:" hey";
+}
+h3::before {
+    content: "hey ";
+}
+
+/* yeh ek letter ka color change karne mein madad karta hai */
+h3::first-letter {
+    color: brown;
+}
+
+
+/* es se jab hum kisi font ko select kare ge tho uska color red ho jaye ga */
+h3::selection{
+    color: chartreuse;
+    background-color: red;
+}
+
+
+/* yehh property font change karne mein kaam aati hai */
+#anime {
+    color: blue;
+}
