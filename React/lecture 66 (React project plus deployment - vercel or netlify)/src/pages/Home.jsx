@@ -23,7 +23,7 @@
 //       }
 
 //       const { data } = await axios.get(url)
-          
+
 //       setRecipes((prev) =>
 //         skipCount === 0 ? data.recipes : [...prev, ...data.recipes],4
 //       );
@@ -141,11 +141,6 @@
 
 
 
-
-
-
-
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import RecipeCard from '../components/RecipeCard';
@@ -243,19 +238,19 @@ function Home() {
   const displayedRecipes = showFavoritesOnly ? favorites : recipes;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white font-sans relative overflow-hidden animate-fadeIn">
-      
+    <div className="min-h-screen bg-[#030719] text-white font-sans relative overflow-hidden animate-fadeIn">
+
       {/* Background Decorative Glowing Orbs with Smooth Floating Feel */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-pink-600/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
       {/* Dark Glassmorphism Navigation Bar */}
-      <nav className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80 px-6 py-4 transition-all shadow-lg">
+      <nav className="sticky top-0 z-50 bg-[#101a30]/90 backdrop-blur-md border-b border-[#26344d]/80 px-6 py-4 transition-all shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer group" onClick={() => { setShowFavoritesOnly(false); fetchRecipes(0); }}>
             <span className="text-2xl group-hover:scale-110 transition-transform duration-200">🍳</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               RecipeFinder
             </span>
           </div>
@@ -263,15 +258,14 @@ function Home() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 active:translate-y-0.5 active:scale-95 ${
-                showFavoritesOnly
-                  ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg shadow-rose-500/30'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700'
-              }`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 active:translate-y-0.5 active:scale-95 ${showFavoritesOnly
+                  ? 'bg-gradient-to-r from-pink-600 to-blue-600 text-white shadow-lg shadow-purple-500/30'
+                  : 'bg-[#17243b] text-slate-300 hover:bg-[#26344d] hover:text-white border border-[#26344d]'
+                }`}
             >
               <span className="hover:scale-125 transition-transform">❤️</span>
               <span>Favorites</span>
-              <span className="bg-slate-950 text-pink-400 text-xs px-2 py-0.5 rounded-full font-bold">
+              <span className="bg-[#030719] text-purple-300 text-xs px-2 py-0.5 rounded-full font-bold">
                 {favorites.length}
               </span>
             </button>
@@ -290,13 +284,13 @@ function Home() {
 
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
             {showFavoritesOnly ? "Your Saved " : "Explore Our "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-blue-400 bg-clip-text text-transparent">
               {showFavoritesOnly ? "Favorites" : "Recipes"}
             </span>
           </h1>
 
           <p className="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
-            {showFavoritesOnly 
+            {showFavoritesOnly
               ? "All your bookmarked recipes in one place for quick cooking access."
               : "Discover amazing recipes and find your next favourite dish."}
           </p>
@@ -313,7 +307,7 @@ function Home() {
                 type="text"
                 name="query"
                 placeholder="Search recipes (e.g. Pizza, Pasta)..."
-                className="w-full min-w-0 bg-slate-900 border border-slate-800 rounded-xl px-5 py-3 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base shadow-inner"
+                className="w-full min-w-0 bg-[#101a30] border border-[#26344d] rounded-xl px-5 py-3 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base shadow-inner"
               />
 
               <button
@@ -331,11 +325,10 @@ function Home() {
                 <button
                   key={cat}
                   onClick={() => handleCategorySelect(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 active:translate-y-1 active:scale-95 ${
-                    activeCategory === cat && !searchQuery
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 active:translate-y-1 active:scale-95 ${activeCategory === cat && !searchQuery
                       ? 'bg-purple-600 text-white shadow-md shadow-purple-500/30 scale-105'
-                      : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800 hover:scale-102'
-                  }`}
+                      : 'bg-[#101a30] text-slate-400 hover:text-white hover:bg-[#17243b] border border-[#26344d] hover:scale-102'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -354,7 +347,7 @@ function Home() {
           ) : (
             <>
               {displayedRecipes.length === 0 ? (
-                <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800 max-w-xl mx-auto backdrop-blur-sm transition-all">
+                <div className="text-center py-20 bg-[#101a30]/70 rounded-3xl border border-[#26344d] max-w-xl mx-auto backdrop-blur-sm transition-all">
                   <div className="text-6xl mb-4 animate-bounce">🍽️</div>
                   <h2 className="text-2xl font-bold mb-2">
                     {showFavoritesOnly ? "No Favorites Saved Yet" : "No Recipes Found"}
@@ -363,8 +356,8 @@ function Home() {
                     {showFavoritesOnly
                       ? "Click the heart icon on any recipe card to save it here for later."
                       : searchQuery
-                      ? `No matching recipes found for "${searchQuery}". Try another search.`
-                      : "No recipes found in this category."}
+                        ? `No matching recipes found for "${searchQuery}". Try another search.`
+                        : "No recipes found in this category."}
                   </p>
                 </div>
               ) : (
@@ -374,7 +367,7 @@ function Home() {
                       {/* Heart Toggle Button Overlaid on Card */}
                       <button
                         onClick={() => toggleFavorite(recipe)}
-                        className="absolute top-3 right-3 z-10 bg-slate-900/80 backdrop-blur-md border border-slate-700/80 p-2.5 rounded-full text-lg shadow-md transition-all duration-200 active:scale-75 hover:bg-slate-800 hover:scale-110"
+                        className="absolute top-3 right-3 z-10 bg-[#101a30]/90 backdrop-blur-md border border-[#26344d]/80 p-2.5 rounded-full text-lg shadow-md transition-all duration-200 active:scale-75 hover:bg-[#17243b] hover:scale-110"
                         title={favorites.some((fav) => fav.id === recipe.id) ? "Remove from Favorites" : "Add to Favorites"}
                       >
                         {favorites.some((fav) => fav.id === recipe.id) ? '❤️' : '🤍'}
@@ -406,4 +399,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;  

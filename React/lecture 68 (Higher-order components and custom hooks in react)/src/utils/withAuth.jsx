@@ -1,14 +1,13 @@
 
 function withAuth(Component) {
     return function (props) {
-        console.log(props)
-        let isLoggedIn = false;
+        let isLoggedIn = true;
         if (isLoggedIn) {
-            return <Component />;
+            return <Component {...props} />;
         }
 
         return <p>Please login to access </p>
     }
 }
 
-export default withAuth
+export default withAuth;

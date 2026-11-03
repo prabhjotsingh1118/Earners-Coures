@@ -5,6 +5,10 @@ import { Route, Routes } from 'react-router'
 import { AuthProfile } from './component/Profile'
 
 function App() {
+  let user = {
+    name: "prabhjot",
+    role: "billionaire"
+  }
   return (
     <div>
       {/* <Dashboard/> */}
@@ -14,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<p>Home</p>} />
         <Route path='/dashboard' element={<AuthDashboard />} />
-        <Route path='/profile' element={<AuthProfile name={"prabhjot"} roll={"Billinor"} />} />
+        <Route path='/profile' element={<AuthProfile {...user} />} />
       </Routes>
     </div>
   )
